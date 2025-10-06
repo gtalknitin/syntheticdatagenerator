@@ -132,7 +132,7 @@ class V10RealEnhancedGenerator:
         """
         Load NIFTY expiry schedule
 
-        Using realistic 2024-2025 calendar
+        Using realistic 2024-2025 calendar (covers full seed data range)
         """
         return {
             'weekly': {
@@ -145,19 +145,45 @@ class V10RealEnhancedGenerator:
                 7: [4, 11, 18, 25],           # Jul
                 8: [1, 8, 15, 22, 29],        # Aug
                 9: [5, 12, 19, 26],           # Sep
-                10: [3, 10, 17, 24, 31]       # Oct
+                10: [3, 10, 17, 24, 31],      # Oct
+                11: [7, 14, 21, 28],          # Nov 2024
+                12: [5, 12, 19, 26],          # Dec 2024
+                # 2025
+                13: [2, 9, 16, 23, 30],       # Jan 2025 (month 1 of 2025)
+                14: [6, 13, 20, 27],          # Feb 2025
+                15: [6, 13, 20, 27],          # Mar 2025
+                16: [3, 10, 17, 24],          # Apr 2025
+                17: [1, 8, 15, 22, 29],       # May 2025
+                18: [5, 12, 19, 26],          # Jun 2025
+                19: [3, 10, 17, 24, 31],      # Jul 2025
+                20: [7, 14, 21, 28],          # Aug 2025
+                21: [4, 11, 18, 25],          # Sep 2025
+                22: [2, 9, 16, 23, 30]        # Oct 2025
             },
             'monthly': {
-                1: 25,   # Jan 25 (last Thu)
-                2: 29,   # Feb 29
-                3: 28,   # Mar 28
-                4: 25,   # Apr 25
-                5: 30,   # May 30
-                6: 27,   # Jun 27
-                7: 25,   # Jul 25
-                8: 29,   # Aug 29
-                9: 26,   # Sep 26
-                10: 31   # Oct 31
+                1: 25,   # Jan 2024
+                2: 29,   # Feb
+                3: 28,   # Mar
+                4: 25,   # Apr
+                5: 30,   # May
+                6: 27,   # Jun
+                7: 25,   # Jul
+                8: 29,   # Aug
+                9: 26,   # Sep
+                10: 31,  # Oct
+                11: 28,  # Nov 2024
+                12: 26,  # Dec 2024
+                # 2025
+                13: 30,  # Jan 2025 (use as month 13 for 2025)
+                14: 27,  # Feb 2025
+                15: 27,  # Mar 2025
+                16: 24,  # Apr 2025
+                17: 29,  # May 2025
+                18: 26,  # Jun 2025
+                19: 31,  # Jul 2025
+                20: 28,  # Aug 2025
+                21: 25,  # Sep 2025
+                22: 30   # Oct 2025
             }
         }
 
@@ -216,15 +242,36 @@ class V10RealEnhancedGenerator:
                 target_month -= 12
                 target_year += 1
 
-            if target_month in self.expiry_schedule['monthly']:
-                day = self.expiry_schedule['monthly'][target_month]
-                expiry_date = datetime(target_year, target_month, day).date()
+            # Map to schedule key (2025 months start at 13)
+            if target_year == 2024:
+                schedule_key = target_month
+            else:  # 2025
+                schedule_key = target_month + 12
 
-                if expiry_date >= date:
-                    expiries.append((expiry_date, 'monthly'))
+            if schedule_key in self.expiry_schedule['monthly']:
+                day = self.expiry_schedule['monthly'][schedule_key]
+                try:
+                    expiry_date = datetime(target_year, target_month, day).date()
+                    if expiry_date >= date:
+                        expiries.append((expiry_date, 'monthly'))
+                except ValueError:
+                    # Invalid date (e.g., Feb 30), skip
+                    logger.warning(f"Invalid expiry date: {target_year}-{target_month}-{day}")
+                    continue
 
-        # Remove duplicates and sort
-        expiries = sorted(list(set(expiries)))
+        # CRITICAL FIX: Remove duplicates where same date has both weekly and monthly
+        # If a date appears as both weekly and monthly, keep only monthly
+        unique_expiries = {}
+        for expiry_date, expiry_type in expiries:
+            if expiry_date in unique_expiries:
+                # Keep monthly over weekly
+                if expiry_type == 'monthly':
+                    unique_expiries[expiry_date] = expiry_type
+            else:
+                unique_expiries[expiry_date] = expiry_type
+
+        # Convert back to list of tuples and sort
+        expiries = sorted([(date, etype) for date, etype in unique_expiries.items()])
 
         # Limit to 6 expiries
         return expiries[:6]
