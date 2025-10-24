@@ -51,8 +51,9 @@ data/cache/*
 !data/cache/.gitkeep
 
 # Generated data (exclude core data, keep samples)
-data/generated/
+data/generated/*
 !data/generated/.gitkeep
+!data/generated/v11_backtest_compatible/
 data/seed/
 !data/samples/
 

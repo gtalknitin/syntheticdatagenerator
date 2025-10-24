@@ -1,0 +1,100 @@
+ATM delta off: K=21650, S=21726, delta=0.60
+ATM delta off: K=21650, S=21726, delta=0.61
+ATM delta off: K=21650, S=21726, delta=-0.39
+ATM delta off: K=21650, S=21726, delta=0.62
+ATM delta off: K=21650, S=21726, delta=-0.38
+ATM delta off: K=21700, S=21726, delta=0.61
+ATM delta off: K=21700, S=21726, delta=-0.39
+Deep OTM CE delta too high: K=23750, S=21726, delta=0.16
+Deep ITM PE delta too high: K=23750, S=21726, delta=-0.84
+Deep OTM CE delta too high: K=23800, S=21726, delta=0.15
+Deep ITM PE delta too high: K=23800, S=21726, delta=-0.85
+Deep OTM CE delta too high: K=23850, S=21726, delta=0.15
+Deep ITM PE delta too high: K=23850, S=21726, delta=-0.85
+Deep OTM CE delta too high: K=23900, S=21726, delta=0.14
+Deep ITM PE delta too high: K=23900, S=21726, delta=-0.86
+Deep OTM CE delta too high: K=23950, S=21726, delta=0.13
+Deep ITM PE delta too high: K=23950, S=21726, delta=-0.87
+Deep OTM CE delta too high: K=24000, S=21726, delta=0.13
+Deep ITM PE delta too high: K=24000, S=21726, delta=-0.87
+Deep OTM CE delta too high: K=24050, S=21726, delta=0.12
+Deep ITM PE delta too high: K=24050, S=21726, delta=-0.88
+Deep OTM CE delta too high: K=24100, S=21726, delta=0.11
+Deep ITM PE delta too high: K=24100, S=21726, delta=-0.88
+Deep OTM CE delta too high: K=24150, S=21726, delta=0.11
+Deep ITM PE delta too high: K=24150, S=21726, delta=-0.89
+Deep OTM CE delta too high: K=24200, S=21726, delta=0.10
+Deep ITM PE delta too high: K=24200, S=21726, delta=-0.90
+Deep ITM PE delta too high: K=24250, S=21726, delta=-0.90
+ATM delta off: K=21550, S=21637, delta=0.62
+ATM delta off: K=21550, S=21637, delta=-0.38
+ATM delta off: K=21550, S=21637, delta=0.61
+ATM delta off: K=21550, S=21637, delta=-0.39
+ATM delta off: K=21550, S=21637, delta=0.62
+ATM delta off: K=21550, S=21637, delta=-0.38
+ATM delta off: K=21600, S=21637, delta=0.61
+ATM delta off: K=21600, S=21637, delta=-0.39
+Deep OTM CE delta too high: K=23650, S=21637, delta=0.15
+Deep ITM PE delta too high: K=23650, S=21637, delta=-0.85
+Deep OTM CE delta too high: K=23700, S=21637, delta=0.15
+Deep ITM PE delta too high: K=23700, S=21637, delta=-0.85
+Deep OTM CE delta too high: K=23750, S=21637, delta=0.14
+Deep ITM PE delta too high: K=23750, S=21637, delta=-0.86
+Deep OTM CE delta too high: K=23800, S=21637, delta=0.14
+Deep ITM PE delta too high: K=23800, S=21637, delta=-0.86
+Deep OTM CE delta too high: K=23850, S=21637, delta=0.13
+Deep ITM PE delta too high: K=23850, S=21637, delta=-0.87
+Deep OTM CE delta too high: K=23900, S=21637, delta=0.13
+Deep ITM PE delta too high: K=23900, S=21637, delta=-0.87
+Deep OTM CE delta too high: K=23950, S=21637, delta=0.12
+Deep ITM PE delta too high: K=23950, S=21637, delta=-0.88
+Deep OTM CE delta too high: K=24000, S=21637, delta=0.12
+Deep ITM PE delta too high: K=24000, S=21637, delta=-0.89
+Deep OTM CE delta too high: K=24050, S=21637, delta=0.10
+Deep ITM PE delta too high: K=24050, S=21637, delta=-0.89
+Deep OTM CE delta too high: K=24100, S=21637, delta=0.10
+ATM delta off: K=21500, S=21588, delta=0.66
+ATM delta off: K=21500, S=21588, delta=-0.34
+ATM delta off: K=21650, S=21588, delta=0.40
+ATM delta off: K=21650, S=21588, delta=-0.60
+ATM delta off: K=21500, S=21588, delta=0.60
+ATM delta off: K=21500, S=21588, delta=-0.40
+ATM delta off: K=21500, S=21588, delta=0.61
+ATM delta off: K=21500, S=21588, delta=-0.39
+ATM delta off: K=21500, S=21588, delta=0.62
+ATM delta off: K=21500, S=21588, delta=-0.37
+ATM delta off: K=21550, S=21588, delta=0.61
+ATM delta off: K=21550, S=21588, delta=-0.39
+Deep OTM CE delta too high: K=23600, S=21588, delta=0.15
+Deep ITM PE delta too high: K=23600, S=21588, delta=-0.85
+Deep OTM CE delta too high: K=23650, S=21588, delta=0.14
+Deep ITM PE delta too high: K=23650, S=21588, delta=-0.86
+Deep OTM CE delta too high: K=23700, S=21588, delta=0.13
+Deep ITM PE delta too high: K=23700, S=21588, delta=-0.87
+Deep OTM CE delta too high: K=23750, S=21588, delta=0.13
+Deep ITM PE delta too high: K=23750, S=21588, delta=-0.87
+Deep OTM CE delta too high: K=23800, S=21588, delta=0.12
+Deep ITM PE delta too high: K=23800, S=21588, delta=-0.88
+Deep OTM CE delta too high: K=23850, S=21588, delta=0.12
+Deep ITM PE delta too high: K=23850, S=21588, delta=-0.89
+Deep OTM CE delta too high: K=23900, S=21588, delta=0.10
+Deep ITM PE delta too high: K=23900, S=21588, delta=-0.89
+Deep OTM CE delta too high: K=23950, S=21588, delta=0.11
+Deep ITM PE delta too high: K=24000, S=21588, delta=-0.90
+ATM delta off: K=21550, S=21602, delta=0.60
+ATM delta off: K=21550, S=21602, delta=-0.40
+ATM delta off: K=21550, S=21602, delta=0.62
+ATM delta off: K=21550, S=21602, delta=-0.38
+ATM delta off: K=21600, S=21602, delta=0.61
+ATM delta off: K=21600, S=21602, delta=-0.39
+Deep OTM CE delta too high: K=23650, S=21602, delta=0.13
+Deep ITM PE delta too high: K=23650, S=21602, delta=-0.88
+Deep OTM CE delta too high: K=23700, S=21602, delta=0.12
+Deep ITM PE delta too high: K=23700, S=21602, delta=-0.88
+Deep OTM CE delta too high: K=23750, S=21602, delta=0.11
+Deep ITM PE delta too high: K=23750, S=21602, delta=-0.89
+Deep OTM CE delta too high: K=23800, S=21602, delta=0.11
+Deep ITM PE delta too high: K=23800, S=21602, delta=-0.90
+Deep OTM CE delta too high: K=23850, S=21602, delta=0.10
+Deep ITM PE delta too high: K=23850, S=21602, delta=-0.90
+ATM delta off: K=21650, S=21741, delta=0.62
